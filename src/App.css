@@ -1,50 +1,67 @@
-/* src/App.css */
-
-/* Remove default margin/padding */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
-/* Navbar */
 .navbar {
-  margin-bottom: 20px; /* Space between navbar and content */
+  margin-bottom: 20px;
 }
 
 .navbar .nav-link {
-  color: #fff !important; /* Navbar text color */
+  color: #fff !important;
 }
 
 .navbar .navbar-brand {
   font-size: 1.8rem;
 }
 
-/* Product Card Styles */
 .product-card {
-  margin-bottom: 20px; /* Space between product cards */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.product-card .card-img-top {
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
   height: 200px;
   object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Add space between the image and content */
 }
 
-.card-body {
-  text-align: center;
-}
-
-.card-title {
-  font-size: 1.2rem;
+.price {
+  font-size: 1.25rem;
   font-weight: bold;
+  color: #28a745;
+  margin-top: 10px; /* Add space between price and rating */
 }
 
-.card-text {
-  font-size: 0.9rem;
-  color: #555;
+.rating {
+  color: #f1c40f;
 }
 
-/* Adjust grid layout */
+button {
+  font-size: 1.1rem;
+  padding: 12px;
+  margin-top: 15px; /* Space between button and other elements */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 .main-content {
   padding-top: 20px;
 }
@@ -61,12 +78,12 @@ body, html {
 
 @media (min-width: 768px) {
   .product-card {
-    margin-bottom: 30px; /* Larger spacing for larger screens */
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 767px) {
   .product-card {
-    margin-bottom: 15px; /* Smaller spacing for mobile screens */
+    margin-bottom: 15px;
   }
 }

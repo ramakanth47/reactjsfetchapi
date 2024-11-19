@@ -4,7 +4,8 @@
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  height: 100%; /* Ensures that cards take full height in their container */
+  height: 100%; 
+  margin-bottom: 20px; 
 }
 
 .product-card:hover {

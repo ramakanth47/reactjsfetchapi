@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProductDetails } from "../services/api";
 import { Spinner, Alert, Button, Row, Col, Card } from "react-bootstrap";
-import "./ProductDetail.css"; // Custom styles
+import "./ProductDetail.css"; // Custom styles for the product detail
 
 const ProductDetail = () => {
   const { id } = useParams();

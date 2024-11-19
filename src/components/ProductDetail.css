@@ -1,22 +1,30 @@
+/* Product Detail Card Styling */
+.product-detail-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px; /* Space at the bottom of the detail card */
+}
+
+/* Image styling in product detail page */
 .product-detail-card img {
   max-height: 400px;
   object-fit: contain;
   border: 1px solid #ddd;
+  margin-bottom: 20px; /* Space between image and text */
 }
 
-.product-detail-card {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
+/* Product dimensions styling */
 .product-dimensions p {
   font-size: 1rem;
   color: #333;
+  margin-bottom: 5px; /* Space between each dimension item */
 }
 
+/* Button styling in product detail page */
 button {
   font-size: 1.1rem;
   padding: 12px;
+  margin-top: 20px; /* Space between button and other elements */
 }
 
 button:hover {

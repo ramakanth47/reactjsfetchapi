@@ -1,16 +1,76 @@
+/* Container for the product list */
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adding spacing between cards */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid columns */
+  gap: 30px; /* Horizontal and vertical spacing between product cards */
+  margin-bottom: 30px; /* Space at the bottom of the grid */
+  padding: 20px; /* Ensuring there's padding around the grid */
 }
 
+/* Individual product card style */
 .product-card {
-  flex: 1 1 250px; /* Ensures cards are equal size */
-  max-width: 300px; /* Prevents cards from getting too large */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure card takes up full height */
+  box-sizing: border-box; /* Make sure padding doesn't cause overflow */
 }
 
+/* Prevent cards from overlapping */
+.product-list .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Allow card to take the full available height */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling for product cards */
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Space between image and content */
+}
+
+/* Price styling */
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 10px; /* Space between price and other elements */
+}
+
+/* Rating styling */
+.rating {
+  color: #f1c40f;
+}
+
+/* Button styling */
+button {
+  font-size: 1.1rem;
+  padding: 12px;
+  margin-top: 15px; /* Space between button and other elements */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Make product cards stack vertically on mobile */
 @media (max-width: 768px) {
   .product-list {
-    justify-content: center;
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 20px; /* Reduced gap between cards on mobile */
   }
 }

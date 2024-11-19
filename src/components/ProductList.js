@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Spinner, Alert } from "react-bootstrap";
+import { Spinner, Alert } from "react-bootstrap";
 import { fetchProducts } from "../services/api";
 import ProductCard from "./ProductCard";
-import "./ProductList.css"; // Custom styling for product list
+import "./ProductList.css"; // Custom styles for the product list
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -32,13 +32,11 @@ const ProductList = () => {
   }
 
   return (
-    <Row className="product-list">
+    <div className="product-list">
       {products.map((product) => (
-        <Col key={product.id} sm={12} md={6} lg={4}>
-          <ProductCard product={product} />
-        </Col>
+        <ProductCard key={product.id} product={product} />
       ))}
-    </Row>
+    </div>
   );
 };
 
