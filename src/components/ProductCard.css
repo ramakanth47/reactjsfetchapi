@@ -1,0 +1,38 @@
+.product-card {
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 100%; /* Ensures that cards take full height in their container */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.rating {
+  color: #f1c40f;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

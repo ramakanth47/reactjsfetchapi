@@ -1,0 +1,16 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adding spacing between cards */
+}
+
+.product-card {
+  flex: 1 1 250px; /* Ensures cards are equal size */
+  max-width: 300px; /* Prevents cards from getting too large */
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    justify-content: center;
+  }
+}

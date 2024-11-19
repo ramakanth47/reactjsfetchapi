@@ -1,0 +1,24 @@
+.product-detail-card img {
+  max-height: 400px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+.product-detail-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.product-dimensions p {
+  font-size: 1rem;
+  color: #333;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+button:hover {
+  background-color: #007bff;
+}

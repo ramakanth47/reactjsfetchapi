@@ -1,38 +1,72 @@
-.App {
+/* src/App.css */
+
+/* Remove default margin/padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 20px; /* Space between navbar and content */
+}
+
+.navbar .nav-link {
+  color: #fff !important; /* Navbar text color */
+}
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+}
+
+/* Product Card Styles */
+.product-card {
+  margin-bottom: 20px; /* Space between product cards */
+}
+
+.product-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Adjust grid layout */
+.main-content {
+  padding-top: 20px;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    margin-bottom: 30px; /* Larger spacing for larger screens */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 767px) {
+  .product-card {
+    margin-bottom: 15px; /* Smaller spacing for mobile screens */
   }
 }
